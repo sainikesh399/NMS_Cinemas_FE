@@ -1,0 +1,47 @@
+<div class="main">
+
+    <div class="section" *ngFor="let movie of movies">
+        <div class="details row">
+            <img class="position" src="assets/img/{{movie.bg_banner}}">
+            <img class="col-sm-4 none" src="assets/img/{{movie.banner}}" style="opacity: 0.9;">
+            <div class="col-sm-8  border border-dark flex"
+                style="z-index: 2; flex-direction: row; justify-content: space-between;">
+                <div class="text">
+                    <h1>{{movie.name}}</h1>
+                    <h5>
+                        <ul>Language: {{movie.lang}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Genre: {{movie.genre}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Runtime: {{movie.time}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Ticket price: {{movie.price}}</ul>
+                    </h5>
+                    <h6>
+                        <ul>{{movie.info}}  </ul>
+                    </h6>
+                </div>
+                <div class="c" style="z-index: 2;">
+                    <button class="btn btn-info"><a [routerLink]="['/updatemovie',movie.id]">Update</a>
+                    </button>
+                    <button class="btn-danger" (click)="remove(movie.id)">Remove</button>
+                    <button class="btn btn-primary" *ngIf="(movie.status=='enabled')"
+                        (click)="disable(movie.id)">disable</button>
+                    <button class="btn btn-primary" *ngIf="(movie.status=='disabled')"
+                        (click)="enable(movie.id)">enable</button>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    </div>
+    <ul class="list-group-infos mt-3">
+        <li class="list-group-item mt-3">
+            <a class="navbar-brand black" style="color: blue;" routerLink="/welcomeadmin">Go back</a>
+        </li>
+    </ul>
+</div>

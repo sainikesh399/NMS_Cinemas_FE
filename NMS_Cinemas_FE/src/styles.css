@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+#cus {
+	width: 100%;
+	border-collapse: collapse;
+}
+.clear{
+	clear: both;
+}
+.table2 {
+	border: 1px solid black;
+	border-radius: 1px;
+	padding: 20px;
+	margin: 20px auto;
+
+	text-align: center;
+	width: 60%;
+}
+
+th {
+	width: 50%;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+form {
+	margin: 0px auto;
+	width: 100%;
+}
+
+input {
+	width: 70%;
+}
+
+label {
+	width: 70%;
+}
+
+select {
+	width: 70%;
+}
+
+.container .sec1 {
+	width: 80%;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.container .sec1 table {
+	margin: 10px auto;
+}
+
+.container .sec1 table th {
+	margin: 0px auto;
+}
+
+.flex{
+	display: flex;
+}
+
+tr {
+	margin: 0px 10px;
+	padding: 0px 10px;
+}
+
+#cus {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#cus th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04AA6D;
+	color: white;
+}
+
+#cus td,
+#cus th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+.position{
+	position: absolute;
+	opacity: 0.4;
+}
+
+@media only screen and (max-width:768px) {
+	.table2 {
+		border: 1px solid black;
+		border-radius: 1px;
+		padding: 10px;
+		margin: 10px auto;
+
+		text-align: center;
+		width: 80%;
+	}
+
+	input {
+		width: 80%;
+	}
+
+	label {
+		width: 80%;
+	}
+
+	select {
+		width: 80%;
+	}
+
+	.col-sm-2 {
+		width: 16.66%;
+	}
+
+	.col-sm-3 {
+		width: 25%;
+	}
+
+	.col-sm-4 {
+		width: 33.33%;
+	}
+	.col-sm-5 {
+		width: 41.66%;
+	}
+	.col-sm-6 {
+		width: 100%;
+	}
+	h1{
+		font-size: 27px;
+	}
+	h5 ul{
+		font-size: 15px;
+	}
+	h6 ul {
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	.table2 {
+		border: 1px solid black;
+		border-radius: 1px;
+		padding: 10px;
+		margin: 10px auto;
+
+		text-align: center;
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	label {
+		width: 100%;
+	}
+
+	select {
+		width: 100%;
+	}
+
+	[class*="c0l-sm-"] {
+		width: 100%;
+	}
+	h1{
+		font-size: 23px;
+	}
+	h5 ul{
+		font-size: 13px;
+	}
+	h6 ul {
+		font-size: 8px;
+	}
+	
+}

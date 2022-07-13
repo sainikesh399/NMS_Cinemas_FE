@@ -1,0 +1,45 @@
+<div class="container">
+    <h3 class="text-center mt-3" style="color: #ffc107; background-color: rgb(128, 44, 5); padding: 20px;">
+       Sign up
+    </h3>
+    <form>
+        <table class="table2">
+            
+            <tr>
+                <th><label for="firstname">First Name:</label></th>
+                <th><input type="text" [(ngModel)]="firstName" name="firstname" placeholder="Enter firstname here:"></th>
+            </tr>
+            <tr>
+                <th><label for="lastname">Last Name:</label></th>
+                <th><input type="text" [(ngModel)]="lastName" name="lastname" placeholder="Enter lastname here:"></th>
+            </tr>
+            <tr>
+                <th><label for="phone">Phone:</label></th>
+                <th><input type="number" [(ngModel)]="phone" name="phone" minlength="10" placeholder="Enter Phone number:"></th>
+            </tr>
+            <tr>
+                <th><label for="address">Address:</label></th>
+                <th><input type="text" [(ngModel)]="address" name="address" placeholder="Enter address here:"></th>
+            </tr>
+            <tr>
+                <th><label for="email">Email:</label></th>
+                <th><input type="email" [(ngModel)]="email" name="email"  placeholder="Enter email here:"></th>
+            </tr>
+            <tr>
+                <th><label for="username">UserName:</label></th>
+                <th><input type="text" [(ngModel)]="username" name="username" placeholder="Enter username here:"></th>
+            </tr>
+            <tr>
+                <th><label for="password">Password:</label></th>
+                <th><input type="password" [(ngModel)]="password" name="password" placeholder="Enter password here:"></th>
+            </tr>
+            
+            <tr>
+                <th><input class="btn btn-success" (click)="signup()" type="submit" value="Submit"></th>
+                <th><input class="btn btn-primary" type="reset" value="Reset"></th>
+            </tr>
+        </table>
+    </form>
+    <a ></a>
+    
+</div>

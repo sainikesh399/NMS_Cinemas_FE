@@ -1,0 +1,64 @@
+<div class="main">
+
+    <div class="section">
+        <div class="details row">
+            <img class="col-sm-4 img" src="assets/img/{{movie.banner}}">
+            <div class="col-sm-4 text-centered flex " style="z-index: 2;">
+                <div class="text border border-dark">
+                    <h1>{{movie.name}}</h1>
+                    <h5>
+                        <ul>Language: {{movie.lang}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Genre: {{movie.genre}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Runtime: {{movie.time}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Ticket price: {{movie.price}}</ul>
+                    </h5>
+                    <h6>
+                        <ul>{{movie.info}} </ul>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-sm-4 text border border-dark">
+                <tr>
+                    <th><label for="date">Date</label></th>
+                    <th><input type="date" name="date" [(ngModel)]="date" style="width: 100%;"></th>
+                </tr>
+                <tr>
+                    <th><label for="seats">Seats</label></th>
+                    <th><input type="number" min="1" max="10" name="seats" [(ngModel)]="seats" style="width: 100%;">
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="showtime">showtime:</label></th>
+                    <th><select for="showtime" [(ngModel)]="showtime" name="showtime" style="width: 100%;">
+                            <option name="showtime" value="06:00 AM">06:00 AM
+                            <option name="showtime" value="09:15 AM">09:15 AM
+                            <option name="showtime" value="12:15 PM">12:15 PM
+                            <option name="showtime" value="03:15 PM">03:15 PM
+                            <option name="showtime" value="06:55 PM">06:55 PM
+                            <option name="showtime" value="10:25 PM">10:25 PM
+                        </select></th>
+                </tr>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-info text-center" (click)="createticket(movie)">Add to
+                        cart</button><br>
+                </div>
+            </div>
+
+            <!-- <a [routerLink]="['/payment',movie.id]">Book</a> -->
+
+
+
+        </div>
+    </div>
+    <ul class="list-group-infos mt-3">
+        <li class="list-group-item mt-3">
+            <a class="navbar-brand " style="color: blue;" routerLink="/welcomeuser">Go back</a>
+        </li>
+    </ul>
+</div>

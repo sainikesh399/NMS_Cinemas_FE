@@ -1,0 +1,85 @@
+<div class="main ">
+    <div class="container">
+        <h3 class="text-center mt-3" style="color: burlywood; background-color: grey; padding: 20px;">
+            Search product
+        </h3>
+        <nav class="row border border-dark p-2">
+            <div class="col-sm-3">
+                <h3>Search by name</h3><br>
+                <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="namemovie()"
+                    placeholder="Enter name here:" style="margin: 10px;">
+                <!-- <button class="btn btn-success" (click)="namemovie()">Search</button> -->
+            </div>
+            <div class="col-sm-3" style="border: 1px solid black; border-right: 0px;">
+                <h3>Filter Language</h3><br>
+                <input type="text" name="lang" [(ngModel)]="lang" (ngModelChange)="langmovie()"
+                    placeholder="Enter Language here:" style="margin: 10px;">
+                <!-- <button class="btn btn-success" (click)="langmovie()">Search</button> -->
+            </div>
+            <div class="col-sm-3" style="border: 1px solid black; border-left: 0px;">
+                <h3>Filter genre</h3><br>
+                <input type="text" name="genre" [(ngModel)]="genre" (ngModelChange)="genremovie()"
+                    placeholder="Enter genre here:" style="margin: 10px;">
+                <!-- <button class="btn btn-success" (click)="genremovie()">Search</button> -->
+            </div>
+            <div class="col-sm-3 text-center">
+                <span><h3>Sort by:</h3></span>
+                <span>
+                    <tr>
+                        <th><button class=" btn btn-primary" (click)="sortbyname()">Name</button></th>
+                        <th><button class=" btn btn-primary" (click)="sortbyprice()">Price</button></th>
+        
+                    </tr>
+                </span>
+        
+            </div>
+
+        </nav>
+    </div>
+    
+    <!-- <div class="text-center border border-dark mt-3" style="font-size: 40px;"><b>Available movies</b> </div> -->
+    <div class="section" *ngFor="let movie of movies">
+        <div class="details row {{movie.status}}">
+            <img class="position" src="assets/img/{{movie.bg_banner}}">
+            <!-- <div class="col-sm-4 " id="valueLocation"> -->
+            <img class="col-sm-4 none" src="assets/img/{{movie.banner}}" style="opacity: 0.9;">
+            <!-- </div> -->
+            <div class="col-sm-6 text-centered border border-dark" style="z-index: 2;">
+                <div class="text">
+                    <p class="h1">{{movie.name}}</p>
+                    <h5>
+                        <ul>Language: {{movie.lang}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Genre: {{movie.genre}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Runtime: {{movie.time}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Ticket price: {{movie.price}}</ul>
+                    </h5>
+                    <h6>
+                        <ul>{{movie.info}} </ul>
+                    </h6>
+                </div>
+
+
+            </div>
+
+            <div class="col-sm-2" style="z-index: 2;">
+                <button class="btn btn-success" *ngIf="(movie.status=='enabled')"><a
+                        [routerLink]="['/booknow',movie.id]">Book Now</a></button><br>
+
+                <span class="btn btn-primary" *ngIf="(movie.status=='disabled')">disabled</span>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <ul class="list-group-infos mt-3">
+        <li class="list-group-item mt-3" >
+            <a class="navbar-brand black" routerLink="#">Go back</a>
+        </li>
+    </ul> -->
+</div>

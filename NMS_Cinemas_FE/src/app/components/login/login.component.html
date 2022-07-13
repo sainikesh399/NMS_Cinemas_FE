@@ -1,0 +1,14 @@
+<h3 class="text-center mt-3 container" style="color: #ffc107; background-color: rgb(128, 44, 5); padding: 20px;">
+    Log in
+  </h3>
+  <div class="wrapper">
+      <div id="formContent">
+        
+        <form >
+          <input type="text" id="login" class="fadeIn second" [(ngModel)]="username" name="username" placeholder="Id">
+          <input type="password" id="password" class="fadeIn third" [(ngModel)]="password" name="password"
+            placeholder="password">
+          <input type="submit" (click)="validateuser()" class="fourth" value="Log In">
+        </form>
+      </div>
+    </div>

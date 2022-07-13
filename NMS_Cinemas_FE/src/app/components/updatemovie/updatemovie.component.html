@@ -1,0 +1,104 @@
+<div class="container">
+    <h3 class="text-center mt-3" style="color: burlywood; background-color: grey; padding: 20px;">
+        Update Genre
+    </h3>
+    <form>
+        <table class="table2" style="width: 80%;" >
+            
+            <tr>
+                <th><label for="info">Genre:</label></th>
+                <th><input type="text" name="updatedgenre" [(ngModel)]="updatedgenre" placeholder="Enter Genre:"></th>
+            </tr>
+            <tr>
+                <th><input class="btn btn-success" type="submit" (click)="updategenre()" value="Update"></th>
+                
+                <th><input class="btn btn-primary" type="reset" value="Reset"></th>
+            </tr>
+        </table>
+    </form>
+    <h3 class="text-center mt-3" style="color: burlywood; background-color: grey; padding: 20px;">
+        Update Movie
+    </h3>
+    <form>
+        <table class="table2" style="width: 80%;" >
+            
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <th><input type="text"  placeholder="Enter name here:" name="name" [(ngModel)]="name" ></th>
+            </tr>
+            
+            <tr>
+                <th><label for="lang">Languages:</label></th>
+                <th><input type="text" name="lang" [(ngModel)]="lang" placeholder="Enter Languages:"></th>
+            </tr>
+            <tr>
+                <th><label for="info">Info:</label></th>
+                <th><input type="text" name="info" [(ngModel)]="info" placeholder="Enter info:"></th>
+            </tr>
+            <tr>
+                <th><label for="info">Genre:</label></th>
+                <th><input type="text" name="genre" [(ngModel)]="genre" placeholder="Enter Genre:"></th>
+            </tr>
+            <tr>
+                <th><label for="time">Movie time:</label></th>
+                <th><input type="text" name="time" [(ngModel)]="time" placeholder="Enter movie runtime:"></th>
+            </tr>
+            <tr>
+                <th><label for="banner">Movie banner:</label></th>
+                <th><input type="file"  id="banner" (change)="onfilechangebanner($event)" ></th>
+            </tr>
+            <tr>
+                <th><label for="bg_banner">Movie BG banner:</label></th>
+                <th><input type="file" id="bg_banner" (change)="onfilechangebgbanner($event)"></th>
+            </tr>
+            <tr>
+                <th><label for="status">Status:</label></th>
+                <th><select for="status" [(ngModel)]="status" name="status">
+                    <option name="status" value="enabled"  >enabled
+                    <option name="status" value="disabled"  >disabled
+                </select></th>
+            </tr>
+            <tr>
+                <th><label for="price">Ticket price:</label></th>
+                <th><input type="number" name="price" [(ngModel)]="price" placeholder="Enter ticket price:"></th>
+            </tr>
+
+            <tr>
+                <th><input class="btn btn-success" type="submit" (click)="updatemovie()" value="Update"></th>
+                
+                <th><input class="btn btn-primary" type="reset" value="Reset"></th>
+            </tr>
+        </table>
+    </form>
+    <h3 class="text-center mt-3" style="color: burlywood; background-color: grey; padding: 20px;">
+        Updated Movie
+    </h3>
+    <div class="main">
+    <div class="section">
+        <div class="details row"> 
+           <img class="position" src="assets/img/{{movie.bg_banner}}" >
+           
+               <img class="col-sm-4 none" src="assets/img/{{movie.banner}}" style="opacity: 0.9;" >
+           
+           <div class="col-sm-8 text-centered coloured" style="z-index: 2;">
+               <div class="text">
+                   <h1>{{movie.name}}</h1>
+                   <h5><ul>Language: {{movie.lang}}</ul></h5>
+                   <h5><ul>Genre: {{movie.genre}}</ul></h5>
+                   <h5><ul>Runtime: {{movie.time}}</ul></h5>
+                   <h5><ul>Ticket price: {{movie.price}}</ul></h5>
+                   <h6><ul>{{movie.info}} </ul></h6>
+               </div>
+              
+               
+           </div>
+        
+          
+       </div></div>
+    
+    <ul class="list-group-infos mt-3">
+        <li class="list-group-item mt-3" >
+            <a class="navbar-brand black" routerLink="/welcomeadmin">Go back</a>
+        </li>
+    </ul>
+</div>

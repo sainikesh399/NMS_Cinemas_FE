@@ -1,0 +1,62 @@
+<div class="container">
+    <h3 class="text-center mt-3" style="color: burlywood; background-color: grey; padding: 20px;">
+        Add movie show
+    </h3>
+    <form>
+        <table class="table2"  >
+            
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <th><input type="text" name="name" [(ngModel)]="name" placeholder="Enter name here:"></th>
+            </tr>
+            
+            <tr>
+                <th><label for="lang">Languages:</label></th>
+                <th><input type="text" name="lang" [(ngModel)]="lang" placeholder="Enter Languages:"></th>
+            </tr>
+            <tr>
+                <th><label for="info">Info:</label></th>
+                <th><input type="text" name="info" [(ngModel)]="info" placeholder="Enter info:"></th>
+            </tr>
+            <tr>
+                <th><label for="info">Genre:</label></th>
+                <th><input type="text" name="genre" [(ngModel)]="genre" placeholder="Enter Genre:"></th>
+            </tr>
+            <tr>
+                <th><label for="time">Movie time:</label></th>
+                <th><input type="text" name="time" [(ngModel)]="time" placeholder="Enter movie runtime:"></th>
+            </tr>
+            <tr>
+                <th><label for="banner">Movie banner:</label></th>
+                <th><input type="file"  id="banner" (change)="onfilechangebanner($event)" ></th>
+            </tr>
+            <tr>
+                <th><label for="bg_banner">Movie BG banner:</label></th>
+                <th><input type="file" id="bg_banner" (change)="onfilechangebgbanner($event)"></th>
+            </tr>
+            <tr>
+                <th><label for="status">Status:</label></th>
+                <th><select for="status" [(ngModel)]="status" name="status">
+                    <option name="status" value="enabled"  >enabled
+                    <option name="status" value="disabled"  >disabled
+                </select></th>
+            </tr>
+            <tr>
+                <th><label for="price">Ticket price:</label></th>
+                <th><input type="number" name="price" [(ngModel)]="price" placeholder="Enter ticket price:"></th>
+            </tr>
+
+            <tr>
+                <th><input class="btn btn-success" type="submit" (click)="addmovie()" value="Add"></th>
+                
+                <th><input class="btn btn-primary" type="reset" value="Reset"></th>
+            </tr>
+        </table>
+    </form>
+    
+    <ul class="list-group-infos mt-3">
+        <li class="list-group-item mt-3" >
+            <a class="navbar-brand black" routerLink="/welcomeadmin">Go back</a>
+        </li>
+    </ul>
+</div>

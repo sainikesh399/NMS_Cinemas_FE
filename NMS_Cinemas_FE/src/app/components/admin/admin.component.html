@@ -1,0 +1,14 @@
+<h3 class="text-center mt-3 container" style="color: #ffc107; background-color: rgb(128, 44, 5); padding: 20px;">
+    Admin Log in
+  </h3>
+  <div class="wrapper">
+      <div id="formContent">
+        
+        <form [formGroup]="loginform" >
+          <input type="text" id="login" class="fadeIn second" formControlName="name" name="name" placeholder="Id">
+          <input type="password" id="password" class="fadeIn third" formControlName="password" name="password"
+            placeholder="password">
+          <input type="submit" (click)="validateadmin()" class="fourth" value="Log In">
+        </form>
+      </div>
+    </div>

@@ -1,0 +1,41 @@
+<div class="container"><div class="main">
+    <h3 class="text-center mt-3 container" style="color: #ffc107; background-color: rgb(128, 44, 5); padding: 20px;">
+        Your Tickets
+      </h3>
+    
+    <div class="section " *ngIf="payable!=0" >
+        <div class="details row border border-primary" *ngFor="let item of tickets; " >          
+            <img class="col-sm-6 img" src="assets/img/{{item.banner}}" >     
+            <div class="col-sm-6 text-centered  " style="z-index: 2;">
+                <div class="text border border-dark"  >
+                    <h1>{{item.moviename}}</h1>
+                   
+                    <h5>
+                        <ul>Seats: {{item.seats}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Date: {{item.date}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Showtime: {{item.showtime}}</ul>
+                    </h5>
+                    <h5>
+                        <ul>Ticket price: {{item.price}}</ul>
+                    </h5>
+                   
+                </div>
+                <div class="text-center" >
+                    <h5 class=" m-2">Payed Amount:{{item.price*item.seats}} </h5>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="pay">
+            <h5>Total payed amount: {{payable}}</h5>
+            <!-- <button class="btn btn-success"><a routerLink="/payment">Pay</a></button> -->
+        </div>
+    </div>
+
+</div></div>
